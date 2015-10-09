@@ -8,6 +8,7 @@ var application = angular.module('application', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
+    'pouchdb',
     'pascalprecht.translate', // angular-translate
     'application.templates', // application templates cache
 ]);
