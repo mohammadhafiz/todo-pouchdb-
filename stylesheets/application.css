@@ -1,0 +1,72 @@
+.highlight {
+    font-weight: bold;
+}
+
+.app-background-cyan {
+    background-color: #00BCD4;
+}
+
+.app-background-pink {
+    background-color: #E91E63;
+}
+
+.app-background-red {
+    background-color: #F44336;
+}
+
+.app-background-purple {
+    background-color: #9C27B0;
+}
+
+.app-background-teal {
+    background-color: #009688;
+}
+
+.app-background-grey {
+    background-color: #9E9E9E;
+}
+
+.app-container {
+    left: 0px;
+    position: absolute;
+    transition: 0.5s ease all;
+    top: 0px;
+    width: 100%;
+}
+
+.app-container.ng-enter {
+    opacity: 0.5;
+}
+
+.app-container.ng-enter-active {
+    opacity: 1;
+}
+
+.app-container.ng-leave {
+    opacity: 1;
+}
+
+.app-container.ng-leave-active {
+    opacity: 0.5;
+}
+
+.app-pointer {
+    cursor: pointer;
+}
+
+.md-list-item-text h3,
+.md-list-item-text p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: no-wrap;
+}
+
+.md-sidenav-left.md-closed-add,
+.md-sidenav-left.md-closed-remove {
+    transition: 0.2s ease-in all;
+}
+
+md-sidenav .md-button {
+	display: block;
+	margin: auto;
+}

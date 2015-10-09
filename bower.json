@@ -1,0 +1,20 @@
+{
+  "name": "pouchdb",
+  "version": "1.0.0",
+  "authors": [
+    "mohammadhafiz <mohammadhafizamiruddin@gmail.com>"
+  ],
+  "description": "implement pouchdb into todo",
+  "main": "todo",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "todo",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
