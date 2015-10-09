@@ -1,0 +1,129 @@
+<md-content flex
+    layout="row"
+    md-swipe-left="close()"
+    md-swipe-right="menu()"
+    md-theme="{{theme}}">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2"
+        md-component-id="menu"
+        md-is-locked-open="$mdMedia('gt-md')">
+        <md-toolbar class="app-toolbar md-whiteframe-z2"
+                ng-animate="animate" md-component-id="menu>
+            <div class="md-toolbar-tools">
+            {{ 'title_menu' | translate }}
+            </div>
+        </md-toolbar>
+        <ng-include src="'todo_menu.html'"></ng-include>
+    </md-sidenav>    
+    
+    <md-content flex
+        layout="column">
+        <md-toolbar class="md-whiteframe-z2"
+            md-scroll-shrink>
+            <div class="md-toolbar-tools"
+                ng-if="theme == 'teal'">
+                <md-button class="md-icon-button"
+                    hide-gt-md
+                    ng-click="menu()">
+                    <md-tooltip>{{ 'action_menu' | translate }}</md-tooltip>
+                    <md-icon>menu</md-icon>
+                </md-button>
+                <h2 class="md-title">{{ 'title_todo_pouchdb' | translate }}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button"
+                    ng-click="$ = 'white'">
+                    <md-tooltip>{{ 'action_email' | translate }}</md-tooltip>
+                    <md-icon>email</md-icon>
+                </md-button>
+                <md-button class="md-icon-button"
+                    ng-click="$ = 'white'">
+                    <md-tooltip>{{ 'action_notifications' | translate }}</md-tooltip>
+                    <md-icon>notifications</md-icon>
+                </md-button>
+                <md-button class="md-icon-button"
+                    ng-click="$parent.theme = 'white'">
+                    <md-tooltip>{{ 'action_search' | translate }}</md-tooltip>
+                    <md-icon>search</md-icon>
+                </md-button>
+            </div>
+
+            <div class="md-toolbar-tools"
+                ng-if="theme == 'white'">
+                <md-button class="md-icon-button"
+                    ng-click="$parent.theme = 'teal'">
+                    <md-tooltip>{{ 'action_back' | translate }}</md-tooltip>
+                    <md-icon>arrow_back</md-icon>
+                </md-button>
+                <md-input-container flex
+                    md-no-float>
+                    <br>
+                    <input ng-model="$parent.query.$"
+                        placeholder="{{ 'action_search' | translate }}"
+                        type="search">
+                </md-input-container>
+                <md-button class="md-icon-button"
+                    ng-click="reset()">
+                    <md-tooltip>{{ 'action_reset' | translate }}</md-tooltip>
+                    <md-icon>cancel</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        
+        <div>
+        <md-content layout-padding>
+                <form name="userForm">        
+                <md-input-container>
+                  <label>Title</label>
+                  <input ng-model="user.title">
+                </md-input-container>
+                <md-input-container>
+                  <label>Email</label>
+                  <input ng-model="user.email" type="email">
+                </md-input-container>
+                  <div layout layout-sm="column">
+                    <md-input-container style="width:70%">
+                        <label>Company (Disabled)</label>
+                        <input ng-model="user.company" disabled>
+                      </md-input-container>
+                    <md-datepicker ng-model="user.submissionDate" md-placeholder="Enter date"></md-datepicker>
+                  </div>
+                  <div layout layout-sm="column">
+                    <md-input-container flex>
+                      <label>First name</label>
+                      <input ng-model="user.firstName">
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label>Last Name</label>
+                      <input ng-model="theMax">
+                    </md-input-container>
+                  </div>
+                  <md-input-container flex>
+                    <label>Address</label>
+                    <input ng-model="user.address">
+                  </md-input-container>
+                  <md-input-container md-no-float>
+                    <input ng-model="user.address2" placeholder="Address 2">
+                  </md-input-container>
+                  <div layout layout-sm="column">
+                    <md-input-container flex>
+                      <label>City</label>
+                      <input ng-model="user.city">
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label>State</label>
+                      <input ng-model="user.state">
+                    </md-input-container>
+                    <md-input-container flex>
+                      <label>Postal Code</label>
+                      <input ng-model="user.postalCode" placeholder="12345">
+                    </md-input-container>
+                  </div>
+                  <md-input-container flex>
+                    <label>Biography</label>
+                    <textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea>
+                  </md-input-container>
+                <md-button class="md-raised md-primary" ngClick="send()">Send</md-button>
+                </form>
+              </md-content>
+            </div>
+    </md-content>
+</md-content>
