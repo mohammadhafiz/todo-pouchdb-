@@ -70,21 +70,23 @@
         
         <div>
         <br><br><br><br><br><br>
-        <center>
-            <md-content layout-padding style="width:50%">
-                <form name="userForm">        
-                <md-input-container>
-                  <label>Username</label>
-                  <input ng-model="">
+        <center>     
+                <section id="todoapp">
+                  <header id="header">
+                <h1>todos</h1>
+                <md-input-container id="new-todo" flex  style="width:50%">
+                  <label>What needs to be done?</label>
+                  <input>
                 </md-input-container>
-                <md-input-container>
-                  <label>Password</label>
-                  <input ng-model="password" type="password">
-                </md-input-container>
-                <md-button class="md-raised md-primary" ngClick="send()">Send</md-button>
+                  </header>
+                  <section id="main">
+                <ul id="todo-list"></ul>
+                  </section>
+                <md-button class="md-raised md-primary" ng-Click="submit()">
+                    {{ 'action_submit' | translate }}
+                </md-button>
                 </form>
-            </md-content>
-        </center>  
-            </div>
+       </center>  
+       </div>
     </md-content>
 </md-content>

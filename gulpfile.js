@@ -58,6 +58,7 @@ var settings = {
         ],
         javascripts: [
             'bower_components/cryptojslib/rollups/aes.js',
+            'bower_components/pouchdb/dist/pouchdb.js',
             'bower_components/angular/angular.js',
             'bower_components/angular-animate/angular-animate.js',
             'bower_components/angular-aria/angular-aria.js',
