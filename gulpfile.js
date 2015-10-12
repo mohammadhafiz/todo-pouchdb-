@@ -11,7 +11,6 @@ var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
 var templateCache = require('gulp-angular-templatecache');
 var uglify = require('gulp-uglify');
-
 // Settings
 var settings = {
     file: {
@@ -69,6 +68,7 @@ var settings = {
             'bower_components/angular-route/angular-route.js',
             'bower_components/angular-sanitize/angular-sanitize.js',
             'bower_components/angular-translate/angular-translate.js',
+            'bower_components/angular-pouchdb/angular-pouchdb.js',
         ],
         stylesheets: [
             'bower_components/roboto-fontface/css/roboto-fontface.css',

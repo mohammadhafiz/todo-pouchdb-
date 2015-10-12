@@ -27,7 +27,7 @@
                     <md-tooltip>{{ 'action_menu' | translate }}</md-tooltip>
                     <md-icon>menu</md-icon>
                 </md-button>
-                <h2 class="md-title">{{ 'title_dashboard' | translate }}</h2>
+                <h2 class="md-title">{{ 'title_vpn_usage_statistics' | translate }}</h2>
                 <span flex></span>
                 <md-button class="md-icon-button"
                     ng-click="$ = 'white'">
@@ -68,23 +68,26 @@
             </div>
         </md-toolbar>
         
-        <div>
-        <br><br><br><br><br><br>
-        <center>
-            <md-content layout-padding style="width:50%">
-                <form name="userForm">        
-                <md-input-container>
-                  <label>Username</label>
-                  <input ng-model="">
-                </md-input-container>
-                <md-input-container>
-                  <label>Password</label>
-                  <input ng-model="password" type="password">
-                </md-input-container>
-                <md-button class="md-raised md-primary" ngClick="send()">Send</md-button>
-                </form>
-            </md-content>
-        </center>  
-            </div>
+              <div>
+                  <md-content>
+                    <section>
+                      <md-list layout-padding>
+                        <md-list-item class="md-3-line" ng-repeat="message in messages" ng-click="test()">
+                            <img ng-src="https://citizenmed.files.wordpress.com/2011/08/user-icon1.jpg" class="md-avatar" alt="{{message.who}}">
+                            <div class="md-list-item-text">
+                              <h3>{{message.username}}</h3>
+                              <p>
+                                {{message.start_date}} - {{message.end_date}}
+                                <br>
+                                {{message.times}}
+                                <br>
+                                {{message.usage}}
+                              </p>
+                            </div>
+                        </md-list-item>
+                      </md-list>
+                    </section>
+                  </md-content>
+                </div>
     </md-content>
 </md-content>

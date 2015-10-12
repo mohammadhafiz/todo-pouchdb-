@@ -8,7 +8,6 @@ var application = angular.module('application', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'pouchdb',
     'pascalprecht.translate', // angular-translate
     'application.templates', // application templates cache
 ]);
@@ -17,9 +16,6 @@ application.config(['$httpProvider',
     function($httpProvider)
     {
         $httpProvider.defaults.headers = {
-            common: {
-                Accept: 'application/vnd.menggaris.v1+json',
-            },
             post: {
                 'Content-Type': 'application/json',
             },

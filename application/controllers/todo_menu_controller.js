@@ -5,4 +5,8 @@ application.controller('TodoMenuController', ['$location', '$scope',
         {
             $location.path('/todo');
         };
+        $scope.vpn = function()
+        {
+            $location.path('/vpn');
+        };
     }]);
