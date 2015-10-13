@@ -42,7 +42,7 @@ application.controller('TodoController', ['$interval', '$mdSidenav', '$scope', '
                 }).on('change', showTodos);
 
           // We have to create a new todo document and enter it in the database
-                $scope.submit = function addTodo(text) 
+                function addTodo(text) 
                 {
                   var todo = {
                     _id: new Date().toISOString(),

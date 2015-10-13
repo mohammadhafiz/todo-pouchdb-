@@ -74,17 +74,14 @@
                 <section id="todoapp">
                   <header id="header">
                 <h1>todos</h1>
-                <md-input-container id="new-todo" flex  style="width:50%">
+                <md-input-container flex  style="width:50%">
                   <label>What needs to be done?</label>
-                  <input>
+                  <input id="new-todo">
                 </md-input-container>
                   </header>
                   <section id="main">
                 <ul id="todo-list"></ul>
                   </section>
-                <md-button class="md-raised md-primary" ng-Click="submit()">
-                    {{ 'action_submit' | translate }}
-                </md-button>
                 </form>
        </center>  
        </div>
