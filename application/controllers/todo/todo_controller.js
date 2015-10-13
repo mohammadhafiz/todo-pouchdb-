@@ -47,6 +47,7 @@ application.controller('TodoController', ['$interval', '$mdSidenav', '$scope', '
                   var todo = {
                     _id: new Date().toISOString(),
                     title: text,
+                    name: text,
                     completed: false
                   };
                   db.put(todo, function callback(err, result) {
