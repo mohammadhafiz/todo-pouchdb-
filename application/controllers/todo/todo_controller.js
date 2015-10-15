@@ -50,6 +50,11 @@ application.controller('TodoController', ['$interval', '$mdSidenav', '$scope', '
                     name: text,
                     completed: false
                   };
+                  db.put(todo, function callback(err, result) {
+                    if (!err) {
+                      console.log('Successfully posted a todo!');
+                    }
+                  });
                 }
 
           // Show the current list of todos by reading them from the database
