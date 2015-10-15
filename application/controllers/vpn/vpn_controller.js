@@ -250,6 +250,33 @@ application.controller('VpnController', ['$location', '$interval', '$mdSidenav',
                 end_date: '18 October 2015',
                 usage: " 0 MB"
               },
+              {
+                face : imagePath,
+                username: '0168257662',
+                no: '0168257662',
+                times: '8.50 A.M',
+                start_date: '13 October 2015',
+                end_date: '18 October 2015',
+                usage: " 0 MB"
+              },
+              {
+                face : imagePath,
+                username: '0168201979',
+                no: '0168201979',
+                times: '8.50 A.M',
+                start_date: '14 October 2015',
+                end_date: '19 October 2015',
+                usage: " 0 MB"
+              },
+              {
+                face : imagePath,
+                username: '0168455248',
+                no: '0168455248',
+                times: '8.50 A.M',
+                start_date: '14 October 2015',
+                end_date: '19 October 2015',
+                usage: " 0 MB"
+              },
             ];
             
 }]);
