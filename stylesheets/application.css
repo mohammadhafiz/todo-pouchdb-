@@ -58,7 +58,7 @@
 .md-list-item-text p {
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: no-wrap;
+    white-space: nowrap;
 }
 
 .md-sidenav-left.md-closed-add,
